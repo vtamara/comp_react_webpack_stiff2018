@@ -15,10 +15,7 @@
   },
   "homepage": "https://github.com/vtamara/comp_react_webpack_stiff2018#readme",
   "devDependencies": {
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "css-loader": "^4.2.2",
     "html-webpack-plugin": "^4.4.1",
     "react": "^16.13.1",
