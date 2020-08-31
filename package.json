@@ -1,23 +1,30 @@
 {
-  "name": "comp_react_webpack_stiff2018",
+  "name": "react_ejemplo_stiff",
   "version": "1.0.0",
   "description": "ejemplo de componente react construido con webpack",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "yarn run transpile"
   },
-  "repository": "git+https://github.com/vtamara/comp_react_webpack_stiff2018.git",
+  "repository": "git+https://github.com/vtamara/react_ejemplo_stiff.git",
   "author": "Vladimir",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vtamara/comp_react_webpack_stiff2018/issues"
+    "url": "https://github.com/vtamara/react_ejemplo_stiff/issues"
   },
-  "homepage": "https://github.com/vtamara/comp_react_webpack_stiff2018#readme",
+  "homepage": "https://github.com/vtamara/react_ejemplo_stiff#readme",
   "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.2",
     "html-webpack-plugin": "^4.4.1",
+    "install": "^0.13.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
@@ -25,9 +32,11 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@babel/core": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4"
+    "@babel/preset-react": "^7.10.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
